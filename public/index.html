@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmer Chougle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+
+<body>
+    <div class="fullscreen">
+        <span class="" id="lod"></span>
+    </div>
+
+    <header id="">
+        <nav class="navbar navbar-expand-lg px-2 navbar-dark" style="color: white;">
+            <div class="container">
+                <a class="navbar-brand" href="#"><svg width="48" id="loading" height="48" viewBox="0 0 48 48"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M47.2901 24C47.2901 29.5525 45.4049 34.9333 41.9558 39.2254C38.5067 43.5176 33.7071 46.4556 28.3747 47.5388C23.0423 48.6221 17.5071 47.7836 12.7122 45.1661C7.91737 42.5487 4.15949 38.3143 2.0789 33.1844C-0.00169116 28.0545 -0.276262 22.3466 1.30197 17.0332C2.8802 11.7197 6.21359 7.12955 10.7342 4.04473C15.2547 0.959912 20.6828 -0.428676 26.0935 0.115566C31.5041 0.659808 36.5626 3.10321 40.4071 7.02943L37.8386 9.65258C34.5884 6.33323 30.3118 4.26751 25.7374 3.80739C21.1631 3.34727 16.574 4.52122 12.7522 7.12922C8.93039 9.73722 6.11225 13.6179 4.77796 18.11C3.44368 22.6022 3.67581 27.4278 5.4348 31.7648C7.1938 36.1017 10.3708 39.6816 14.4245 41.8945C18.4783 44.1073 23.1579 44.8162 27.666 43.9004C32.1742 42.9846 36.232 40.5008 39.1479 36.872C42.0639 33.2433 43.6577 28.6943 43.6577 24H47.2901Z"
+                            fill="white" />
+                        <path
+                            d="M15.2126 39.5668C11.6931 37.6157 8.95888 34.5046 7.4759 30.7634C5.99291 27.0223 5.85289 22.8826 7.07967 19.0498C8.30646 15.217 10.8242 11.9281 14.2038 9.74364C17.5834 7.55917 21.6158 6.61421 25.614 7.06979C29.6122 7.52536 33.3287 9.35328 36.1304 12.2421C38.932 15.1309 40.6454 18.9018 40.9787 22.9124C41.3119 26.923 40.2443 30.9251 37.9578 34.2367C35.6714 37.5483 32.3075 39.9646 28.4393 41.0739L27.6982 38.4893C30.9685 37.5515 33.8124 35.5087 35.7455 32.7089C37.6785 29.9092 38.5811 26.5257 38.2994 23.1351C38.0177 19.7444 36.5691 16.5563 34.2005 14.114C31.8319 11.6718 28.6898 10.1264 25.3097 9.74123C21.9295 9.35608 18.5203 10.155 15.6631 12.0018C12.8059 13.8486 10.6773 16.6291 9.64018 19.8695C8.60302 23.1099 8.72141 26.6097 9.97516 29.7725C11.2289 32.9354 13.5405 35.5657 16.516 37.2152L15.2126 39.5668Z"
+                            fill="white" />
+                        <path
+                            d="M23.6451 11.9279C26.5194 11.9279 29.3048 12.9246 31.5267 14.7483C33.7486 16.5719 35.2695 19.1095 35.8302 21.9289C36.391 24.7482 35.9569 27.6748 34.602 30.2099C33.247 32.7451 31.055 34.7319 28.3995 35.832C25.744 36.932 22.7892 37.0772 20.0387 36.2428C17.2881 35.4083 14.912 33.6459 13.3151 31.2558C11.7182 28.8656 10.9994 25.9957 11.2811 23.135C11.5629 20.2743 12.8277 17.5997 14.8602 15.5671L16.218 16.9251C14.4998 18.6436 13.4304 20.9047 13.1922 23.3232C12.954 25.7418 13.5618 28.1681 14.9118 30.1888C16.2619 32.2095 18.2707 33.6995 20.5961 34.4049C22.9215 35.1104 25.4196 34.9877 27.6646 34.0576C29.9097 33.1276 31.7628 31.4479 32.9084 29.3046C34.0539 27.1613 34.4208 24.6871 33.9468 22.3035C33.4727 19.92 32.1869 17.7746 30.3085 16.2328C28.43 14.6911 26.0752 13.8484 23.6451 13.8484V11.9279Z"
+                            fill="white" />
+                        <path
+                            d="M16.2207 20.3214C17.1533 18.6035 18.6527 17.2622 20.4633 16.526C22.2739 15.7898 24.2837 15.7043 26.1504 16.2839C28.017 16.8636 29.6249 18.0726 30.7001 19.7049C31.7753 21.3373 32.2513 23.292 32.047 25.236C31.8427 27.18 30.9707 28.993 29.5797 30.3661C28.1886 31.7392 26.3645 32.5875 24.4181 32.7664C22.4718 32.9452 20.5237 32.4436 18.9057 31.347C17.2877 30.2504 16.0999 28.6267 15.5448 26.7525L16.9136 26.347C17.3749 27.9045 18.362 29.2538 19.7065 30.1651C21.0511 31.0764 22.6701 31.4933 24.2875 31.3446C25.9049 31.196 27.4208 30.4911 28.5768 29.35C29.7328 28.2089 30.4575 26.7023 30.6273 25.0868C30.797 23.4713 30.4015 21.8469 29.5079 20.4904C28.6144 19.1338 27.2782 18.1291 25.727 17.6474C24.1758 17.1657 22.5056 17.2368 21.0009 17.8486C19.4963 18.4604 18.2503 19.5751 17.4753 21.0026L16.2207 20.3214Z"
+                            fill="white" />
+                        <path
+                            d="M27.3421 26.8704C26.7597 27.7258 25.8988 28.3527 24.906 28.6445C23.9132 28.9362 22.85 28.8747 21.8975 28.4703C20.945 28.066 20.1622 27.3439 19.6824 26.427C19.2026 25.5101 19.0555 24.4552 19.2663 23.4421C19.477 22.4289 20.0324 21.5202 20.838 20.8707C21.6436 20.2212 22.6494 19.8711 23.6841 19.8802C24.7188 19.8892 25.7184 20.2567 26.5125 20.9202C27.3067 21.5836 27.8462 22.5019 28.0392 23.5186L27.2166 23.6748C27.0597 22.8485 26.6212 22.1021 25.9758 21.5628C25.3303 21.0235 24.5178 20.7248 23.6768 20.7175C22.8358 20.7101 22.0183 20.9946 21.3635 21.5225C20.7087 22.0505 20.2572 22.7891 20.086 23.6126C19.9147 24.4361 20.0342 25.2935 20.4242 26.0387C20.8142 26.784 21.4505 27.3709 22.2247 27.6996C22.9989 28.0282 23.8631 28.0782 24.67 27.8411C25.4769 27.604 26.1767 27.0944 26.65 26.3991L27.3421 26.8704Z"
+                            fill="white" />
+                        <path
+                            d="M22.8567 21.9963C23.4018 21.8139 23.9934 21.8262 24.5305 22.031C25.0676 22.2359 25.5171 22.6207 25.8024 23.1198C26.0876 23.6189 26.191 24.2016 26.0949 24.7684C25.9988 25.3352 25.7091 25.8512 25.2753 26.2283C24.8414 26.6055 24.2902 26.8206 23.7156 26.8369C23.141 26.8532 22.5784 26.6697 22.1239 26.3177C21.6694 25.9658 21.3509 25.4671 21.2228 24.9066C21.0947 24.3461 21.1649 23.7586 21.4214 23.2441L22.2928 23.6786C22.1368 23.9915 22.0941 24.3488 22.172 24.6896C22.2499 25.0305 22.4436 25.3337 22.72 25.5478C22.9964 25.7618 23.3385 25.8734 23.688 25.8635C24.0374 25.8536 24.3726 25.7228 24.6365 25.4934C24.9003 25.264 25.0765 24.9503 25.1349 24.6056C25.1934 24.2609 25.1305 23.9065 24.957 23.603C24.7836 23.2995 24.5102 23.0655 24.1836 22.9409C23.8569 22.8163 23.4972 22.8088 23.1657 22.9198L22.8567 21.9963Z"
+                            fill="white" />
+                        <ellipse cx="23.6451" cy="24.3529" rx="0.496953" ry="0.496997"
+                            transform="rotate(-180 23.6451 24.3529)" fill="white" />
+                    </svg>
+
+
+                    Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="">
+                            <a class="" href="#projects">Projects</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="#tech">Technologies </a>
+                        </li>
+                        <li class="">
+                            <a class="" href="#about">About me </a>
+                        </li>
+                    </ul>
+
+                    <div class="social">
+                        <a href="https://github.com/Asmer72582">
+                            <!-- <svg width="40px" class="" fill="white" height="35px" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <mask id="head">
+                                    <rect x="0" y="0" width="32" height="32" fill="white" />
+                                    <path
+                                        d="M13.0799878,23.0788653 C9.51998779,22.6788653 5.79998779,21.2988653 5.79998779,15.1788653 C5.79998779,13.4388653 6.41998779,11.9988653 7.43998779,10.8788653 C7.27998779,10.4788653 6.71998779,8.83886529 7.59998779,6.63886529 C7.59998779,6.63886529 8.93998779,6.21886529 11.9999878,8.27886529 C13.2799878,7.91886529 14.6399878,7.73886529 15.9999878,7.73886529 C17.3599878,7.73886529 18.7199878,7.91886529 19.9999878,8.27886529 C23.0599878,6.19886529 24.3999878,6.63886529 24.3999878,6.63886529 C25.2799878,8.83886529 24.7199878,10.4788653 24.5599878,10.8788653 C25.5799878,11.9988653 26.1999878,13.4188653 26.1999878,15.1788653 C26.1999878,21.3188653 22.4599878,22.6788653 18.8999878,23.0788653 C18.1400123,23.3374399 13.7613513,23.1246319 13.0799878,23.0788653 Z"
+                                        fill="black" transform='rotate(0)'>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 16 21"
+                                            to="15 16 21" begin="0s" dur="1.6s"
+                                            values="0 16 21;15 16 21;0 15.5 21;-15 16 21;0 16 21" keySplines="
+                              0 0 0.5 1;
+                              0.5 0 1 1;
+                              0 0 0.5 1;
+                              0.5 0 1 1" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" repeatCount="indefinite" />
+                                    </path>
+                                </mask>
+                                <mask id="arm">
+                                    <rect x="0" y="0" width="32" height="32" fill="#fff" />
+                                    <path
+                                        d="M6.64,25.56 C6.46,25.1 5.68,23.68 5,23.3 C4.44,23 3.64,22.26 4.98,22.24 C6.24,22.22 7.14,23.4 7.44,23.88 C8.88,26.3 6.96,26.46 6.64,25.56 Z"
+                                        fill="black" transform="rotate(0)">
+                                        <animateTransform attributeName="transform" type="rotate" from="0 7.5 25.5"
+                                            to="14 7.5 25.5" begin="0s" dur="0.4s"
+                                            values="0 10 25.5;-14 7.5 25.5;0 7.5 25.5;" keyTimes="0;0.5;1"
+                                            calcMode="linear" repeatCount="indefinite" />
+                                    </path>
+                                </mask>
+                            </defs>
+                            <g id="loader" mask="url(#head)">
+                                <path
+                                    d="M0,16 C0,23.08 4.58,29.06 10.94,31.18 C11.74,31.32 12.04,30.84 12.04,30.42 C12.04,30.04 12.02,28.78 12.02,27.44 C8.02970203,27.6507377 6.96,26.46 6.64,25.56 C6.46,25.1 7.14469622,24.843264 7.48451204,24.5191774 C9.49086651,26.4257531 11.18,25.62 12.1,25.2 C12.24,24.16 12.66,23.46 13.12,23.06 C13.58,22.66 18.4268489,22.6804856 18.94,23.06 C19.52,23.56 20.02,24.52 20.02,26.02 C20.02,28.16 20,29.88 20,30.42 C20,30.84 20.3,31.34 21.1,31.18 C27.42,29.06 32,23.06 32,16 C32,7.16 24.84,0 16,0 C7.16,0 0,7.16 0,16 Z"
+                                    id="body" fill="#959DA5" mask="url(#arm)"></path>
+                            </g>
+                        </svg> -->
+                            <svg width="32" class="animated pulse infinite" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16 1C7.52829 1 0.666626 7.86167 0.666626 16.3333C0.666626 23.1183 5.05579 28.8492 11.1508 30.8808C11.9175 31.015 12.205 30.555 12.205 30.1525C12.205 29.7883 12.1858 28.5808 12.1858 27.2967C8.33329 28.0058 7.33663 26.3575 7.02996 25.495C6.85746 25.0542 6.10996 23.6933 5.45829 23.3292C4.92163 23.0417 4.15496 22.3325 5.43913 22.3133C6.64663 22.2942 7.50913 23.425 7.79663 23.885C9.17663 26.2042 11.3808 25.5525 12.2625 25.15C12.3966 24.1533 12.7991 23.4825 13.24 23.0992C9.82829 22.7158 6.26329 21.3933 6.26329 15.5283C6.26329 13.8608 6.85746 12.4808 7.83496 11.4075C7.68163 11.0242 7.14496 9.4525 7.98829 7.34417C7.98829 7.34417 9.27246 6.94167 12.205 8.91583C13.4316 8.57083 14.735 8.39833 16.0383 8.39833C17.3416 8.39833 18.645 8.57083 19.8716 8.91583C22.8041 6.9225 24.0883 7.34417 24.0883 7.34417C24.9316 9.4525 24.395 11.0242 24.2416 11.4075C25.2191 12.4808 25.8133 13.8417 25.8133 15.5283C25.8133 21.4125 22.2291 22.7158 18.8175 23.0992C19.3733 23.5783 19.8525 24.4983 19.8525 25.9358C19.8525 27.9867 19.8333 29.635 19.8333 30.1525C19.8333 30.555 20.1208 31.0342 20.8875 30.8808C26.9441 28.8492 31.3333 23.0992 31.3333 16.3333C31.3333 7.86167 24.4716 1 16 1V1Z"
+                                    fill="white" />
+                            </svg>
+
+                        </a>
+                        <a href="https://www.linkedin.com/in/asmer-chougle-8616b71b7/">
+
+                            <svg width="32" class="animated pulse infinite" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 3C0 1.34315 1.34315 0 3 0H29C30.6569 0 32 1.34315 32 3V29C32 30.6569 30.6569 32 29 32H3C1.34315 32 0 30.6569 0 29V3Z"
+                                    fill="white" />
+                                <path
+                                    d="M6.33333 2.5C4.76853 2.5 3.5 3.76853 3.5 5.33333C3.5 6.89814 4.76853 8.16667 6.33333 8.16667C7.89814 8.16667 9.16667 6.89814 9.16667 5.33333C9.16667 3.76853 7.89814 2.5 6.33333 2.5Z"
+                                    fill="black" />
+                                <path
+                                    d="M3.66667 10.5C3.57462 10.5 3.5 10.5746 3.5 10.6667V28C3.5 28.092 3.57462 28.1667 3.66667 28.1667H9C9.09205 28.1667 9.16667 28.092 9.16667 28V10.6667C9.16667 10.5746 9.09205 10.5 9 10.5H3.66667Z"
+                                    fill="black" />
+                                <path
+                                    d="M12.3333 10.5C12.2413 10.5 12.1667 10.5746 12.1667 10.6667V28C12.1667 28.092 12.2413 28.1667 12.3333 28.1667H17.6667C17.7587 28.1667 17.8333 28.092 17.8333 28V18.6667C17.8333 18.0036 18.0967 17.3677 18.5656 16.8989C19.0344 16.4301 19.6703 16.1667 20.3333 16.1667C20.9964 16.1667 21.6323 16.4301 22.1011 16.8989C22.5699 17.3677 22.8333 18.0036 22.8333 18.6667V28C22.8333 28.092 22.908 28.1667 23 28.1667H28.3333C28.4254 28.1667 28.5 28.092 28.5 28V16.507C28.5 13.2713 25.6859 10.74 22.4665 11.0327C21.4736 11.1229 20.4919 11.3697 19.5753 11.7626L17.8333 12.5091V10.6667C17.8333 10.5746 17.7587 10.5 17.6667 10.5H12.3333Z"
+                                    fill="black" />
+                            </svg>
+
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <section id="home">
+            <div class="container">
+                <h1>Asmer Chougle <br> <span style="visibility: hidden;">UUU</span> -Web Developer</h1>
+
+                <p class="pl-4">
+                    <span style="visibility: hidden;">UUU</span>Myself Mohammad Asmer Altaf Chougle I am from Valote,
+                    Maharashtra, India. I am <span id="age"></span> years old currently doing computer engineerining at
+                    Gharda Institute of
+                    Technology, Khed want to become a professional full-stack developer. I had started developing since
+                    2019. I am passionate about my work, I can design a web page in given timeline. I have a ability to
+                    solve the coding problems.
+                </p>
+
+                <a href="mailto:asmer0236@gmail.com"><button class="btn ml-5">Get in Touch</button></a>
+            </div>
+            <svg width="589" style="float: right;" height="500" viewBox="0 0 686 760" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                    <path d="M671.539 496.615L584.077 409.154" stroke="#505685" />
+                    <path d="M759 409.154L671.539 321.692" stroke="url(#paint0_linear_3_125)" />
+                    <path d="M584.077 409.154L671.539 321.692" stroke="#505685" />
+                    <path d="M671.539 496.615L759 409.154" stroke="#505685" />
+                    <path d="M584.077 409.154L467.462 292.538" stroke="#505685" />
+                    <path d="M671.539 321.692L554.923 205.077" stroke="url(#paint1_linear_3_125)" />
+                    <path d="M467.462 292.538L554.923 205.077" stroke="#505685" />
+                    <path d="M584.077 409.154L671.539 321.692" stroke="url(#paint2_linear_3_125)" />
+                    <path d="M350.846 1L438.308 88.4615" stroke="#505685" />
+                    <path d="M263.385 88.4615L350.846 175.923" stroke="#505685" />
+                    <path d="M438.308 88.4615L350.846 175.923" stroke="#505685" />
+                    <path d="M350.846 1L263.385 88.4615" stroke="#505685" />
+                    <path d="M438.308 88.4615L554.923 205.077" stroke="url(#paint3_linear_3_125)" />
+                    <path d="M350.846 175.923L467.462 292.538" stroke="#505685" />
+                    <path d="M438.308 88.4615L350.846 175.923" stroke="#505685" />
+                    <path d="M467.462 292.538L554.923 380" stroke="#505685" />
+                    <path d="M380 380L467.462 467.461" stroke="#505685" />
+                    <path d="M554.923 380L467.462 467.461" stroke="#505685" />
+                    <path d="M554.923 380L671.539 496.615" stroke="#505685" />
+                    <path d="M467.462 467.461L584.077 584.077" stroke="#505685" />
+                    <path d="M671.539 496.615L584.077 584.077" stroke="url(#paint4_linear_3_125)" />
+                    <path d="M554.923 380L467.462 467.461" stroke="#505685" />
+                    <path d="M380 380L292.539 292.538" stroke="#505685" />
+                    <path d="M467.462 292.538L380 205.077" stroke="#505685" />
+                    <path d="M292.539 292.538L380 205.077" stroke="#505685" />
+                    <path d="M292.539 292.538L175.924 175.923" stroke="#505685" />
+                    <path d="M380 205.077L263.385 88.4615" stroke="#505685" />
+                    <path d="M175.923 175.923L263.385 88.4615" stroke="url(#paint5_linear_3_125)" />
+                    <path d="M292.539 292.538L380 205.077" stroke="#505685" />
+                    <path d="M496.615 671.539L409.154 584.077" stroke="#505685" />
+                    <path d="M584.077 584.077L496.615 496.615" stroke="#505685" />
+                    <path d="M409.154 584.077L496.615 496.615" stroke="#505685" />
+                    <path d="M496.615 671.539L584.077 584.077" stroke="#505685" />
+                    <path d="M409.154 584.077L292.538 467.462" stroke="#505685" />
+                    <path d="M496.615 496.615L380 380" stroke="#505685" />
+                    <path d="M292.538 467.462L380 380" stroke="#505685" />
+                    <path d="M409.154 584.077L496.615 496.615" stroke="url(#paint6_linear_3_125)" />
+                    <path d="M175.923 175.923L263.385 263.385" stroke="#505685" />
+                    <path d="M88.4617 263.385L175.923 350.846" stroke="#505685" />
+                    <path d="M263.385 263.385L175.923 350.846" stroke="#505685" />
+                    <path d="M175.923 175.923L88.4616 263.385" stroke="#505685" />
+                    <path d="M263.385 263.385L380 380" stroke="url(#paint7_linear_3_125)" />
+                    <path d="M175.923 350.846L292.539 467.462" stroke="#505685" />
+                    <path d="M263.385 263.385L175.923 350.846" stroke="#505685" />
+                    <path d="M292.539 467.462L380 554.923" stroke="#505685" />
+                    <path d="M205.077 554.923L292.539 642.385" stroke="#505685" />
+                    <path d="M380 554.923L292.539 642.385" stroke="#505685" />
+                    <path d="M380 554.923L496.616 671.539" stroke="url(#paint8_linear_3_125)" />
+                    <path d="M292.539 642.385L409.154 759" stroke="url(#paint9_linear_3_125)" />
+                    <path d="M496.615 671.538L409.154 759" stroke="#505685" />
+                    <path d="M380 554.923L292.539 642.385" stroke="#505685" />
+                    <path d="M205.077 554.923L117.615 467.462" stroke="#505685" />
+                    <path d="M292.539 467.462L205.077 380" stroke="#505685" />
+                    <path d="M117.615 467.462L205.077 380" stroke="#505685" />
+                    <path d="M117.615 467.462L1.00008 350.846" stroke="#505685" />
+                    <path d="M205.077 380L88.4616 263.385" stroke="#505685" />
+                    <path d="M1.00012 350.846L88.4616 263.385" stroke="#505685" />
+                    <path d="M117.615 467.462L205.077 380" stroke="url(#paint10_linear_3_125)" />
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_3_125" x1="759" y1="386.636" x2="699.059" y2="347.071"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="1" stop-color="#FF6B00" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_3_125" x1="670.044" y1="321.692" x2="530.554" y2="264.135"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_3_125" x1="606.595" y1="409.154" x2="646.16" y2="349.212"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="1" stop-color="#FF6B00" />
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_3_125" x1="438.308" y1="118.486" x2="518.23" y2="171.239"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.421875" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_3_125" x1="649.021" y1="496.615" x2="609.456" y2="556.557"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.0001" stop-color="#505685" />
+                        <stop offset="0.317708" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint5_linear_3_125" x1="175.923" y1="175.923" x2="218.689" y2="70.3552"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.494792" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint6_linear_3_125" x1="431.672" y1="584.077" x2="471.237" y2="524.135"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF6B00" />
+                        <stop offset="0.234375" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint7_linear_3_125" x1="292.913" y1="293.286" x2="395.908" y2="335.272"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.75" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint8_linear_3_125" x1="380" y1="584.947" x2="459.922" y2="637.701"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.0001" stop-color="#505685" />
+                        <stop offset="0.317708" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint9_linear_3_125" x1="292.539" y1="672.409" x2="372.461" y2="725.162"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.0001" stop-color="#505685" />
+                        <stop offset="0.317708" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                    <linearGradient id="paint10_linear_3_125" x1="117.615" y1="467.462" x2="160.381" y2="361.894"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#505685" />
+                        <stop offset="0.0582928" stop-color="#FF6B00" />
+                        <stop offset="1" stop-color="#505685" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </section>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+            <h1>Projects</h1>
+
+            <div class="content container row mx-auto mb-5">
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project1.png" width="100%" height="150" alt="">
+                    <h4>Online Memo</h4>
+                    <hr />
+                    <p>Online Memo saving website it is built using js and dealing with local storage, here you can save
+                        any text and save it or you can also delete it.</p>
+                    <a href="https://onlinememo-app.web.app/"><button class="btn">Look it up</button></a>
+                </div>
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project2.png" width="100%" height="150" alt="">
+                    <h4>Anime World</h4>
+                    <hr />
+                    <p>A multi platform for mobile apps and website to get latest anime information, built using react
+                        and technology of PWA and dealing with API.</p>
+                    <a href="https://animeeeeeworld.web.app/"><button class="btn">Look it up</button></a>
+                </div>
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project3.png" width="100%" height="150" alt="">
+                    <h4>Design Template</h4>
+                    <hr />
+                    <p>Design for a next generation company website built using simple HTML CSS and JS it is also use to
+                        showcase the art of company by modeling.</p>
+                    <a href="https://website-8ed4b.web.app/"><button class="btn">Look it up</button></a>
+                </div>
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project4.png" width="100%" height="150" alt="">
+                    <h4>Ecommerce Store</h4>
+                    <hr />
+                    <p>An ecommerce website for local store where he can sell products, built using PHP, SQL & JS. it
+                        also has payment gatway for checkout purpose.</p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project5.png" width="100%" height="150" alt="">
+                    <h4>Thoughts</h4>
+                    <hr />
+                    <p>A social media platform for poets to share their thoughts and poems, built by using PHP, SQL, JS
+                        & WEB TECH. Here you can connect with the world.</p>
+                    <a href="http://poetryapp.epizy.com/"><button class="btn">Look it up</button></a>
+                </div>
+                <div class="box col-lg-4 col-sm-12">
+                    <img src="./img/project6.png" width="100%" height="150" alt="">
+                    <h4>HN clothing</h4>
+                    <hr />
+                    <p>HN clothing is online store to sell the cloths made by HN group it is local startup, built using
+                        PHP, SQL & JS. Intreactive design.</p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+                <div class=" box col-lg-4 col-sm-12">
+                    <img src="./img/project7.png" width="100%" height="150" alt="">
+                    <h4>Quiz App</h4>
+                    <hr />
+                    <p>A online quiz application for a tution classes to help the teacher take tests easy and fast,
+                        built using PHP & SQL.</p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+                <div class=" box col-lg-4 col-sm-12">
+                    <img src="./img/project8.png" width="100%" height="150" alt="">
+                    <h4>Slambook</h4>
+                    <hr />
+                    <p>SlamBook is a trending thing where you ask your firend multiple question by sharing link
+                        and let
+                        them guess how many are right, built using JS</p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+                <div class=" box col-lg-4 col-sm-12">
+                    <img src="./img/project9.png" width="100%" height="150" alt="">
+                    <h4>Store showcase</h4>
+                    <hr />
+                    <p>Design for general store to shocase their products where they have different
+                        category, built by
+                        using HTML, CSS & JS.</p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+                <div class=" box col-lg-4 col-sm-12">
+                    <img src="./img/project10.png" width="100%" height="150" alt="">
+                    <h4>Notifications</h4>
+                    <hr />
+                    <p>Notifications is a online platform for students and teachers to share notice of
+                        school/college
+                        and other, built using PHP, SQL & JS.
+                    </p>
+                    <button class="btn" onclick="Myfun()">Look it up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-5">
+        <div class="container">
+            <h1>Technologies</h1>
+
+            <div class="container-fluid">
+                <div class="chat-box">
+                    <div class="text">
+                        <p>HTML</p>
+                        <p>Expert</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="text">
+                        <p>JS & Jquery</p>
+                        <p>Advance</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="text">
+                        <p>CSS, Bootstrap & Tailwind CSS</p>
+                        <p>Regular</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="text">
+                        <p>React, Node & Express</p>
+                        <p>Regular</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="text">
+                        <p>Django & Flask</p>
+                        <p>Beginner</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="text">
+                        <p>React Native </p>
+                        <p>Beginner</p>
+                    </div>
+                    <div id="progress">
+                        <div class="active" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+            </div>
+            <h3>Additional technologies and skills</h3>
+
+            <div class="container-fluid">
+                <div class="skills">
+                    <ul>
+                        <li>GIT</li>
+                        <li>PWA</li>
+                        <li>RWD (css)</li>
+                    </ul>
+                    <ul>
+                        <li>Quick learning</li>
+                        <li>Problem Solver</li>
+                    </ul>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Strong Base</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h1>About me</h1>
+
+
+            <div class="container-fluid">
+
+                <div class="flex">
+                    <div class="years">2019</div>
+                    <div class="years">2020</div>
+                    <div class="years">2021</div>
+                    <div class="years">2022</div>
+                </div>
+                <div style="width: 75%; margin: 15px auto; background-color: white; height: 10px;"></div>
+                <div class="about">
+
+                    <div class="years-info">
+                        <div class="dot"></div>
+                        2019 I started my Computer Science Journey by starting basic HTML tags, But I didn't know that I
+                        would come this long. At the initial stage I was guied by my friends, <a
+                            href="https://www.linkedin.com/in/sultan-kazi/">@sultan_kazi</a> & <a
+                            href="https://www.linkedin.com/in/sajjad-khalfe-2b932814b/">@sajjad_khalfe</a>.
+
+                    </div>
+                    <div class="years-info">
+                        <div class="dot"></div>
+                        2020 The Year of distruction due to COVID it was a hard year for everyone but this year changed
+                        my whole life. Cause I got time in explore then web and how does the web works what are HTTPS &
+                        different types of protocols. Got all the basic knowledge to get started.
+
+                    </div>
+                    <div class="years-info">
+                        <div class="dot"></div>
+                        2021 I started designing websites and trying to learn backend stuff, at this point I was able to
+                        design any kind of website given. So i stared PHP for my backend purpose and understand its
+                        basics and how does it works.
+
+                    </div>
+                    <div class="years-info">
+                        <div class="dot"></div>
+                        2022 My dream to become a computer engineer started. I was enjoying my life but sadly our Indian
+                        Education system just piss me off, I couldn't get admission where I wanted to, so I join a local
+                        Mumbai University College near my town.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="contact">
+                <p>Call me:</p>
+                <p><a href="tel:7558724597">+91 7558724597</a></p>
+            </div>
+
+            <div class="contact">
+                <p>Email:</p>
+                <p><a href="mailto:asmer0236@gmail.com">asmer0236@gmail.com</a></p>
+            </div>
+
+            <div class="comtact">
+                <a href="https://github.com/Asmer72582">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 1C7.52829 1 0.666626 7.86167 0.666626 16.3333C0.666626 23.1183 5.05579 28.8492 11.1508 30.8808C11.9175 31.015 12.205 30.555 12.205 30.1525C12.205 29.7883 12.1858 28.5808 12.1858 27.2967C8.33329 28.0058 7.33663 26.3575 7.02996 25.495C6.85746 25.0542 6.10996 23.6933 5.45829 23.3292C4.92163 23.0417 4.15496 22.3325 5.43913 22.3133C6.64663 22.2942 7.50913 23.425 7.79663 23.885C9.17663 26.2042 11.3808 25.5525 12.2625 25.15C12.3966 24.1533 12.7991 23.4825 13.24 23.0992C9.82829 22.7158 6.26329 21.3933 6.26329 15.5283C6.26329 13.8608 6.85746 12.4808 7.83496 11.4075C7.68163 11.0242 7.14496 9.4525 7.98829 7.34417C7.98829 7.34417 9.27246 6.94167 12.205 8.91583C13.4316 8.57083 14.735 8.39833 16.0383 8.39833C17.3416 8.39833 18.645 8.57083 19.8716 8.91583C22.8041 6.9225 24.0883 7.34417 24.0883 7.34417C24.9316 9.4525 24.395 11.0242 24.2416 11.4075C25.2191 12.4808 25.8133 13.8417 25.8133 15.5283C25.8133 21.4125 22.2291 22.7158 18.8175 23.0992C19.3733 23.5783 19.8525 24.4983 19.8525 25.9358C19.8525 27.9867 19.8333 29.635 19.8333 30.1525C19.8333 30.555 20.1208 31.0342 20.8875 30.8808C26.9441 28.8492 31.3333 23.0992 31.3333 16.3333C31.3333 7.86167 24.4716 1 16 1V1Z"
+                            fill="white" />
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/asmer-chougle-8616b71b7/">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 3C0 1.34315 1.34315 0 3 0H29C30.6569 0 32 1.34315 32 3V29C32 30.6569 30.6569 32 29 32H3C1.34315 32 0 30.6569 0 29V3Z"
+                            fill="white" />
+                        <path
+                            d="M6.33333 2.5C4.76853 2.5 3.5 3.76853 3.5 5.33333C3.5 6.89814 4.76853 8.16667 6.33333 8.16667C7.89814 8.16667 9.16667 6.89814 9.16667 5.33333C9.16667 3.76853 7.89814 2.5 6.33333 2.5Z"
+                            fill="black" />
+                        <path
+                            d="M3.66667 10.5C3.57462 10.5 3.5 10.5746 3.5 10.6667V28C3.5 28.092 3.57462 28.1667 3.66667 28.1667H9C9.09205 28.1667 9.16667 28.092 9.16667 28V10.6667C9.16667 10.5746 9.09205 10.5 9 10.5H3.66667Z"
+                            fill="black" />
+                        <path
+                            d="M12.3333 10.5C12.2413 10.5 12.1667 10.5746 12.1667 10.6667V28C12.1667 28.092 12.2413 28.1667 12.3333 28.1667H17.6667C17.7587 28.1667 17.8333 28.092 17.8333 28V18.6667C17.8333 18.0036 18.0967 17.3677 18.5656 16.8989C19.0344 16.4301 19.6703 16.1667 20.3333 16.1667C20.9964 16.1667 21.6323 16.4301 22.1011 16.8989C22.5699 17.3677 22.8333 18.0036 22.8333 18.6667V28C22.8333 28.092 22.908 28.1667 23 28.1667H28.3333C28.4254 28.1667 28.5 28.092 28.5 28V16.507C28.5 13.2713 25.6859 10.74 22.4665 11.0327C21.4736 11.1229 20.4919 11.3697 19.5753 11.7626L17.8333 12.5091V10.6667C17.8333 10.5746 17.7587 10.5 17.6667 10.5H12.3333Z"
+                            fill="black" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/gh/AmagiTech/JSLoader/amagiloader.js"></script>
+
+<script>
+    swal({
+        title: "This website is not for mobile devices",
+        text: "You can view it on bigger display",
+        icon: "warning",
+        buttons: true,
+        dangerMode: false,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Confirmed", {
+                    icon: "success",
+                });
+            } else {
+                swal("Confirmed", {
+                    icon: "success",
+                });
+            }
+        });
+    let loaders = ['loader1', 'loader2', 'loader3', 'loader4', 'loader5', 'loader6', 'loader7', 'loader8', 'loader9', 'loader10']
+    const loader = document.querySelector(".fullscreen");
+    const l = document.querySelector("#lod");
+    const number = Math.floor(Math.random() * 10);
+    l.className = loaders[number]
+    console.log(number)
+    const loader2 = document.querySelector('.' + loaders[number]);
+    setTimeout(() => {
+        loader.className = 'hide';
+        loader2.className = 'hide';
+    }, 10000);
+
+
+    const d = new Date();
+    let year = d.getFullYear();
+
+    let age = year - 2003;
+    document.getElementById("age").innerHTML = age;
+    function Myfun(params) {
+        // alert("as")
+        swal("Alert", "It is not Hosted online", "warning");
+    }
+
+</script>
